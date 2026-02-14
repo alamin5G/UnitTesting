@@ -29,7 +29,7 @@ public class BankAccountParameterizedTest {
         newAccount.depositBalance(amountToBeDeposited);
 
         // Assert
-        assertEquals(expectedBalance, newAccount.getBalance(), 0.01);
+        assertEquals(expectedBalance, newAccount.getBalance());
     }
 
     @ParameterizedTest(name = "Initial: {0}, Withdraw: {1} → Expected: {2}")
