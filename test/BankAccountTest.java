@@ -19,9 +19,12 @@ public class BankAccountTest {
 
     public void depositTestWithSpecificAmount()
     {
+        //arrange
         double amountToBeDeposited = 500;
+        //act
         account.depositBalance(amountToBeDeposited);
         double expectedBalance = 500;
+        //assert
         assertEquals(expectedBalance, account.getBalance());
     }
 
@@ -29,7 +32,9 @@ public class BankAccountTest {
     @Test
     @DisplayName("Test Deposit Method: Should Throw IllegalArgumentException When Deposit Amount is Negative")
     public void depositTestWithNegativeAmount() {
+        //arrange
         double negativeAmount = -100;
+        //act and assert
         assertThrows(IllegalArgumentException.class, () -> account.depositBalance(negativeAmount));
     }
 
